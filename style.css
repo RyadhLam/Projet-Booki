@@ -1,0 +1,921 @@
+:root {
+    --color-darkblue: #0065fc;
+    --color-lightblue: #deebff;
+    --color-grey: #f2f2f2;
+    --color-darkgrey: #d9d9d9;
+    --color-bordure-grey: rgba(234, 233, 233, 0.5);
+  }
+  
+  * {
+    /* border: 1px solid red !important; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    list-style: none;
+  }
+  
+  #global-wrapper {
+    width: 1440px;
+    padding: 40px 50px 0 50px;
+    margin: auto;
+  }
+  
+  /* **************** Style général**********************/
+  
+  .big-title {
+    font-size: 20px;
+  }
+  
+  .medium-high-title {
+    font-size: 18px;
+  }
+  
+  .medium-title {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .light-title {
+    font-size: 15px;
+    font-weight: 200;
+  }
+  
+  i.fa-solid {
+    color: var(--color-darkblue);
+  }
+  
+  .fa-star-grey::before {
+    color: var(--color-darkgrey);
+  }
+  
+  a,
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .lien-card {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  /********************************* HEADER ****************/
+  
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  
+  #container-header-logo {
+    width: 100%;
+  }
+  
+  #container-header-logo img {
+    width: 10%;
+  }
+  
+  #container-header-nav a {
+    padding: 53px 45px 45px 45px;
+    border-top: 2px solid transparent;
+  }
+  
+  #container-header-nav a:hover {
+    border-top: 2px solid var(--color-darkblue);
+    color: var(--color-darkblue);
+    text-decoration: none;
+  }
+  
+  #container-header-nav ul {
+    display: flex;
+  }
+  
+  /************************ MAIN************************/
+  
+  /*------------------- Search bar -----------------*/
+  .search-bar {
+    margin: 23px 0 31px 0;
+  }
+  
+  .search-bar form {
+    display: flex;
+  }
+  
+  .search-bar input,
+  .search-bar:focus {
+    width: 17%;
+    border: 1px solid var(--color-bordure-grey);
+    height: 50px;
+    outline: none;
+    font-weight: bold;
+    text-indent: 10px;
+  }
+  
+  .search-bar input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .search-bar i {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--color-grey);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-bar button {
+    border: none;
+    width: 10%;
+    height: 50px;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--color-darkblue);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .btn-search-submit {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-search-submit i {
+    visibility: collapse;
+  
+  }
+  
+  .btn-search-submit span {
+    visibility: visible;
+    color: white;
+    position: absolute;
+  
+  
+  }
+  
+  /******************* filter-part ************* **/
+  
+  .container-filters {
+    display: flex;
+    align-items: center;
+    height: 54px;
+  }
+  
+  .container-filters h4 {
+    width: 100px;
+  }
+  
+  /*--------- Filter buttons -------------*/
+  .list-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  
+  .filter-buttons {
+    border-radius: 50px;
+    height: 52px;
+    border: 2px solid var(--color-darkgrey);
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-out;
+  }
+  
+  .filter-buttons:hover {
+    cursor: pointer;
+    background-color: var(--color-darkgrey);
+  }
+  
+  .filter-buttons i {
+    height: 52px;
+    width: 52px;
+    border-radius: 50px;
+    background-color: var(--color-lightblue);
+    margin: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .filter-buttons button {
+    line-height: 52px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0 15px 0 15px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  .part-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0 35px 0;
+  }
+  
+  .part-info i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-darkgrey);
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    padding-bottom: 3px;
+  }
+  
+  /******************************** Hebergement Section **********************/
+  
+  /*-------------hebergement content--------------*/
+  
+  #hebergements-section {
+    display: flex;
+    gap: 5%;
+  }
+  
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .container-cards-result {
+    border-radius: 15px;
+    width: 70%;
+    flex-direction: column;
+    background-color: var(--color-grey);
+  }
+  
+  .container-cards-result h3 {
+    margin: 47px 0 24px 40px;
+  }
+  
+  .container-cards-result p {
+    margin: 35px 0 40px 42px;
+  }
+  
+  /*-------- hebergement card ---------*/
+  
+  /* commentaire : postion relative au parent card pour mettre absolute sur les enfants et les placer ou l'on veut avec les top, bottom... */
+  .result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    width: 28%;
+    height: 200px;
+    border-radius: 20px;
+    /* CSS boxshadow generator */
+    -webkit-box-shadow: 0px 0px 14px 1px #d9d9d9;
+    box-shadow: 0px 0px 14px 1px #d9d9d9;
+    transition: all 1s ease-out;
+  }
+  
+  .result-card:hover {
+    -webkit-box-shadow: 0px 0px 14px 1px var(--color-darkblue);
+    box-shadow: 0px 0px 14px 1px var(--color-darkblue);
+  }
+  
+  .result-card img {
+    width: 95%;
+    height: 65%;
+    position: absolute;
+    top: 7px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  .result-card picture {
+    width: 95%;
+  
+  }
+  
+  .result-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: absolute;
+    width: 95%;
+    height: 37%;
+    padding: 8px 0 8px 15px;
+    background: white;
+    bottom: 0;
+    border-radius: 0 0 20px 20px;
+    font-size: 15px;
+    gap: 5px;
+  }
+  
+  /************** Popular Part ***********/
+  .container-cards-pop {
+    width: 30%;
+    background-color: var(--color-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+  }
+  
+  .container-cards-pop h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 21px;
+  }
+  
+  .container-cards-pop h3 i {
+    color: black;
+    margin-left: 75px;
+  }
+  
+  /*------------- card popular --------------*/
+  
+  /* commentaire : postion relative au parent card pour mettre absolute sur les enfants et les placer ou l'on veut avec les right, left, top, bottom... */
+  .popular-card {
+    width: 85%;
+    height: 24%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    /* CSS boxshadow generator */
+    -webkit-box-shadow: 0px 0px 14px 1px #d9d9d9;
+    box-shadow: 0px 0px 14px 1px #d9d9d9;
+    transition: all 1s ease-out;
+  }
+  
+  .popular-card:hover {
+    --webkit-box-shadow: 0px 0px 14px 1px var(--color-darkblue);
+    box-shadow: 0px 0px 14px 1px var(--color-darkblue);
+  }
+  
+  .popular-card picture {
+    height: 90%;
+  }
+  
+  .popular-card img {
+    width: 35%;
+    height: 90%;
+    border-radius: 15px;
+    object-fit: cover;
+    position: absolute;
+    left: 7px;
+  }
+  
+  .popular-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    width: 66%;
+    height: 90%;
+    border-radius: 0 15px 15px 0;
+    background-color: white;
+    gap: 12px;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  
+  .popular-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /********************** Activity section ********************/
+  
+  #activity-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  
+  .container-activity {
+    height: 384px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .container-activity-solo {
+    width: 22%;
+    display: flex;
+  }
+  
+  .container-activity-duo {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .container-activity-duo:nth-child(2) .activity-card:nth-child(1) {
+    height: 60%;
+  }
+  
+  .container-activity-duo:nth-child(2) .activity-card:nth-child(2) {
+    height: 40%;
+  }
+  
+  .container-activity-duo:nth-child(4) .activity-card:nth-child(1) {
+    height: 45%;
+  }
+  
+  .container-activity-duo:nth-child(4) .activity-card:nth-child(2) {
+    height: 55%;
+  }
+  
+  /* commentaire : postion relative au parent card pour mettre absolute sur les enfants et les placer ou l'on veut avec les top, bottom... */
+  .activity-card {
+    width: 100%;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 14px 1px #d9d9d9;
+    box-shadow: 0px 0px 14px 1px #d9d9d9;
+    border-radius: 15px;
+    transition: all 1s ease-out;
+  }
+  
+  .activity-card:hover {
+    /* transform css */
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  
+  /* .activity-card picture {
+    height: 90%;
+  } */
+  
+  
+  .activity-card img {
+    width: 100%;
+    height: 99%;
+    border-radius: 15px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+  }
+  
+  .activity-card h4 {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  /*********************** FOOTER **************************/
+  footer {
+    width: 1440px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    margin-left: -50px;
+    margin-top: 50px;
+    background-color: var(--color-grey);
+  }
+  
+  .footer-card {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  
+  .footer-card:first-child {
+    padding-left: 50px;
+  }
+  
+  .footer-card ul {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer-card li {
+    cursor: pointer;
+  }
+  
+  /***************************************** RESPONSIVE *****************************************/
+  
+  /* Responsive Tablette max 992px*/
+  @media screen and (max-width: 992px) {
+    #global-wrapper {
+      width: 100%;
+    }
+  
+    .big-title {
+      font-size: 23px;
+    }
+  
+    .light-title {
+      font-size: 18px;
+    }
+  
+    header {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  
+    #container-header-logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    #container-header-logo img {
+      width: 20%;
+    }
+  
+    /* --------- nav bar ------- */
+    #container-header-nav {
+      width: 100%;
+    }
+  
+    #container-header-nav ul {
+      justify-content: space-around;
+    }
+  
+    #container-header-nav a {
+      padding: 5px;
+      border-top: none;
+      border-bottom: 2px solid var(--color-grey);
+      font-size: 20px;
+    }
+  
+    #container-header-nav a:hover {
+      border-top: none;
+      border-bottom: 2px solid var(--color-darkblue);
+      color: var(--color-darkblue);
+    }
+  
+    /* --------- filter part -------- */
+    #filter-part {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #filter-part h1 {
+      margin: 40px 0 40px 0;
+    }
+  
+    .search-bar {
+      width: 80%;
+    }
+  
+    .search-bar input {
+      width: 40%;
+    }
+  
+    .search-bar button {
+      width: 8%;
+    }
+  
+    .btn-search-submit i {
+      visibility: visible;
+      color: white;
+      background-color: var(--color-darkblue);
+      border-radius: 0 15px 15px 0;
+    }
+  
+    .btn-search-submit span {
+      visibility: collapse;
+    }
+  
+    .container-filters {
+      flex-direction: column;
+      align-items: flex-start;
+      height: fit-content;
+    }
+  
+    .list-buttons {
+      gap: 20px;
+      margin: 20px 0px 20px 0;
+      padding-right: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    /*-- hebergement section --*/
+  
+    #hebergements-section {
+      flex-direction: column-reverse;
+    }
+  
+    /* -- populaires --*/
+  
+    .container-cards-pop {
+      width: 100%;
+      height: 520px;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      gap: 20px;
+    }
+  
+    .container-cards-pop h3 {
+      justify-content: space-between;
+      width: 84%;
+    }
+  
+    .container-cards-result p {
+      margin-left: 70px;
+    }
+  
+    .popular-card {
+      height: 26%;
+    }
+  
+  
+    /* -- hebergement part --*/
+  
+    .container-cards-result {
+      width: 100%;
+    }
+  
+    .container-cards-result h3 {
+      padding-left: 17px;
+    }
+  
+    .result-card {
+      width: 41%;
+      height: 250px;
+    }
+  
+    /* --- activity-part --- */
+  
+    #activity-section {
+      height: 850px;
+    }
+  
+    #activity-section h3 {
+      margin-left: 20px;
+    }
+  
+    .container-activity {
+      flex-wrap: wrap;
+    }
+  
+    .container-activity-solo,
+    .container-activity-duo {
+      width: 45%;
+      height: 100%;
+      margin: 15px;
+    }
+  
+    .container-activity-duo:nth-child(2) .activity-card:nth-child(1),
+    .container-activity-duo:nth-child(2) .activity-card:nth-child(2),
+    .container-activity-duo:nth-child(4) .activity-card:nth-child(1),
+    .container-activity-duo:nth-child(4) .activity-card:nth-child(2) {
+      height: 100%;
+    }
+  
+    /* ---footer--- */
+  
+    footer {
+      width: 100%;
+      margin-top: 100px;
+      padding-left: 50px;
+      margin: 60px 0 0 0;
+    }
+  
+    .footer-card {
+      width: 30%;
+      padding-left: 50px;
+    }
+  
+    .footer-card li {
+      font-size: 15px;
+    }
+  
+    @media screen and (max-width: 853px) {
+      .footer-card:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  
+  /* ---------------------------Responsive Smartphone max 768px--------------------------------------------*/
+  
+  @media screen and (max-width: 768px) {
+    #global-wrapper {
+      padding: 40px 0 0px 0;
+    }
+  
+    .big-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  
+    .light-title {
+      font-size: 16px;
+    }
+  
+    .medium-high-title {
+      font-weight: 700;
+    }
+  
+    /* -------- Header---------- */
+    header {
+      margin-bottom: 10px;
+    }
+  
+    #container-header-logo img {
+      content: url("./images/logo/Booki@3x.png");
+      width: 30%;
+    }
+  
+    #container-header-nav ul {
+      padding: 5px;
+    }
+  
+    #container-header-nav li {
+      text-align: center;
+      width: 100%;
+      border-bottom: 3px solid var(--color-grey);
+      padding: 5px;
+    }
+  
+    #container-header-nav li:hover {
+      border-bottom: 3px solid var(--color-darkblue);
+      color: var(--color-darkblue);
+      padding: 5px;
+    }
+  
+    #container-header-nav a:hover {
+      border: none;
+    }
+  
+    #container-header-nav a {
+      display: block;
+      border-bottom: none;
+      width: 100%;
+      line-height: 30px;
+      padding: 0;
+      font-size: 22px;
+    }
+  
+    /*--------------- main ---------*/
+  
+    /* section filtre */
+    #filter-part {
+      margin: 0 25px 0 25px;
+    }
+  
+    #filter-part h1 {
+      margin: 10px 0 10px 0;
+    }
+  
+    #filter-part h2 {
+      margin-bottom: 10px;
+    }
+  
+    .search-bar {
+      width: 100%;
+      position: relative;
+    }
+  
+    .search-bar .fas {
+      width: 58px;
+    }
+  
+    .search-bar input {
+      width: 90%;
+      text-align: left;
+      font-size: 18px;
+      padding-left: 20px;
+    }
+  
+    .search-bar button {
+      font-size: 0px;
+      background-color: white;
+    }
+  
+    .btn-search-submit i {
+      border-radius: 15px;
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+  
+    .list-buttons {
+      padding: 0;
+    }
+  
+    .filter-buttons button {
+      font-size: 15px;
+    }
+  
+    .part-info {
+      margin: 15px 0 30px 0;
+    }
+  
+    .part-info p {
+      width: 80%;
+    }
+  
+    /* ----Part hebergements ----*/
+  
+    /* part popular */
+    .container-cards-pop {
+      border-radius: 0;
+      height: 620px;
+      margin-bottom: 0;
+    }
+  
+    .container-cards-pop h3 {
+      width: 95%;
+      padding: 0 15px 0 15px;
+    }
+  
+    .popular-card {
+      width: 90%;
+      height: 50%;
+    }
+  
+    /* part result */
+    .container-cards-result {
+      background-color: white;
+    }
+  
+    .container-cards-result h3 {
+      margin-left: 10px;
+    }
+  
+    .result-card {
+      width: 90%;
+      height: 200px;
+    }
+  
+  
+  
+    .container-cards-result p {
+      width: 90%;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  
+    /**** activity part *****/
+    #activity-section {
+      height: 1400px;
+    }
+  
+    .container-activity {
+      height: 100%;
+    }
+  
+    .container-activity-solo {
+      width: 100%;
+      height: 200px;
+      margin: 0 15px 0 15px;
+    }
+  
+    .container-activity-duo {
+      width: 100%;
+      height: 400px;
+      gap: 33px;
+      margin: 0 15px 0 15px;
+    }
+  
+    footer {
+      flex-direction: column;
+      height: 100%;
+      padding: 30px 0 50px 30px;
+      margin-top: 0;
+      gap: 25px;
+    }
+  
+    .footer-card {
+      width: 100%;
+      padding: 0;
+    }
+  }
